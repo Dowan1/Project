@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC 
+	"-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<properties resource="mybatis.properties" />
+	<typeAliases>
+		<typeAlias type="Model.Comment" alias="Comment"/>
+		<typeAlias type="Model.DTO.CommentDTO" alias="CommentDTO"/>
+		<typeAlias type="Model.DTO.Member" alias="Member"/>
+		<typeAlias type="Model.AuthInfo" alias="AuthInfo"/>
+		<typeAlias type="Model.Aca" alias="Aca"/>
+		<typeAlias type="Model.Bcar" alias="Bcar"/>
+		<typeAlias type="Model.Cca" alias="Ccar"/>
+	</typeAliases>
+
+</configuration>
