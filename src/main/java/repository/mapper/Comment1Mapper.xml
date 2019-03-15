@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="repository.mapper.Comment1Mapper">
+	<cache />
+	<sql id="basecolumn">
+		comment_no,
+	  	user_id,
+		comment_content, 
+		reg_date
+	</sql>
+	<insert id="insertComment" parameterType="Comment">
+		insert into comment1 (comment_no, user_id, comment_content, reg_date)
+		values(#{commentNo}, #{userId}, #{commentContent},sysdate)
+	</insert>
+	<resultMap type="CommentDTO" id="baseCommentDTO">
+		<id column="comment_no" jdbcType="BIGINT" property="commentNo"/>
+		<result column="user_id" jdbcType="VARCHAR" property="userId"/>
+		<result column="comment_content" jdbcType="VARCHAR" property="commentContent"/>
+		<result column="reg_date" jdbcType="TIMESTAMP" property="regDate"/>
+	</resultMap>
+	<select id="selectCommentCondition" parameterType="Comment" resultMap="baseCommentDTO">
+		SELECT
+	  		<include refid="basecolumn" />
+		FROM comment1
+		<where>
+			<if test="commentNo != null">
+					comment_no = #{commentNo}
+			</if>
+		</where>
+	</select>
+	<delete id="deleteComment" parameterType="long" >
+		delete from 	comment1
+		where comment_no = #{commentNo1}
+	</delete>
+	
+	
+</mapper>
