@@ -8,6 +8,7 @@
 	<typeAliases>
 		<typeAlias type="Model.Comment" alias="Comment"/>
 		<typeAlias type="Model.DTO.CommentDTO" alias="CommentDTO"/>
+		<typeAlias type="Model.FestivalDTO" alias="FestivalDTO"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -22,5 +23,6 @@
 	</environments>	
 	<mappers>
 		<mapper resource="repository/mapper/CommentMapper.xml"/>
+		<mapper resource="repository/mapper/FestivalMapper.xml"/>
 	</mappers>	
 </configuration>

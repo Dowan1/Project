@@ -5,5 +5,6 @@
 	   		http://www.springframework.org/schema/beans/spring-beans.xsd"
 	   		>
 	<bean class="Controller.CommentController" />
-	
+	<bean class="Controller.FestivalMainController" />
+
 </beans>

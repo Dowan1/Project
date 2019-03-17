@@ -13,6 +13,7 @@
 		<typeAlias type="Model.Aca" alias="Aca"/>
 		<typeAlias type="Model.Bcar" alias="Bcar"/>
 		<typeAlias type="Model.Cca" alias="Ccar"/>
+
 	</typeAliases>
 
 </configuration>
