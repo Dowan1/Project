@@ -16,7 +16,7 @@ public class FestivalListService {
 	
 	public List<FestivalDTO> festivallist(FestivalDTO dto) {
 		// TODO Auto-generated method stub
-		String path = null;
+
 		List<FestivalDTO> result = festivalRepository.festivallist(dto);
 		System.out.println("서비스");
 		

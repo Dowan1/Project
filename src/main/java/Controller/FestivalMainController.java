@@ -24,9 +24,10 @@ public class FestivalMainController {
 	@RequestMapping(value="/festival/main", method = RequestMethod.GET )
 	public String form(Model model,FestivalDTO dto) {
 		List<FestivalDTO> Festivallist = festivallistservice.festivallist(dto);
-		model.addAttribute("dto", dto);
+		model.addAttribute("Festivallist", Festivallist);
 		System.out.println("컨트롤러");
-		return "Festival/FestivalMain";
+		
+		return "festival/FestivalMain";
 	
 	}
 	
