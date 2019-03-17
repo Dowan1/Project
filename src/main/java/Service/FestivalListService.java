@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import Model.FestivalDTO;
+import other.AutoPaging;
 import repository.FestivalRepository;
 @Service
 public class FestivalListService {
@@ -23,5 +24,6 @@ public class FestivalListService {
 		return result;
 	
 	}
+	
 
 }

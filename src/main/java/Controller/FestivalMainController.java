@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import Model.FestivalDTO;
 import Service.FestivalListService;
+import other.AutoPaging;
 
 
 @Controller
@@ -25,11 +26,10 @@ public class FestivalMainController {
 	public String form(Model model,FestivalDTO dto) {
 		List<FestivalDTO> Festivallist = festivallistservice.festivallist(dto);
 		model.addAttribute("Festivallist", Festivallist);
-		System.out.println("컨트롤러");
-		
 		return "festival/FestivalMain";
 	
 	}
+	
 	
 	public String formPost() {
 		// TODO Auto-generated method stub

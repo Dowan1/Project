@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import Model.FestivalDTO;
+import other.AutoPaging;
 @Repository
 public class FestivalRepository extends AbstractRepository {
 	@Autowired
@@ -18,5 +19,7 @@ public class FestivalRepository extends AbstractRepository {
 		System.out.println("레포지토리");
 		return sqlSession.selectList("FestivalMapper.selectlist",dto);
 	}
+	
+	
 
 }
